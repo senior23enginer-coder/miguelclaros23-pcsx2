@@ -67,7 +67,7 @@ jobs:
           sudo apt-get install -y --allow-downgrades 'libc6=2.35-0ubuntu*' 'libc6-dev=2.35-0ubuntu*' libstdc++6=12.3.0-1ubuntu1~22.04 libgcc-s1=12.3.0-1ubuntu1~22.04
 
       - name: Checkout Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       # actions/checkout elides tags, fetch them primarily for releases
       - name: Fetch Tags
@@ -98,7 +98,7 @@ jobs:
         run: echo "timestamp=$(date -u "+%Y-%m-%d-%H;%M;%S")" >> $GITHUB_OUTPUT
 
       - name: ccache cache files
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: .ccache
           key: ${{ inputs.os }} ${{ inputs.platform }} ${{ inputs.compiler }} ${{ inputs.detail }} ccache ${{ steps.ccache_cache_timestamp.outputs.timestamp }}
@@ -120,7 +120,7 @@ jobs:
 
       - name: Cache Dependencies
         id: cache-deps
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: ~/deps
           key: ${{ inputs.os }} ${{ inputs.platform }} deps ${{ hashFiles('.github/workflows/scripts/linux/build-dependencies-qt.sh') }}
@@ -177,7 +177,7 @@ jobs:
 
       - name: Upload artifact
         if: inputs.buildAppImage == true
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: ${{ steps.artifact-metadata.outputs.artifact-name }}
           path: ci-artifacts
