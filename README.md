@@ -25,3 +25,21 @@ Please note that a BIOS dump from a legitimately-owned PS2 console is required t
 PCSX2 supports translation into other languages using [Crowdin](https://crowdin.com/project/pcsx2-emulator).
 
 See the [Contributing Guidelines](https://github.com/PCSX2/pcsx2/blob/master/.github/CONTRIBUTING.md) or visit the [GitHub Wiki](https://github.com/PCSX2/pcsx2/wiki) for more info on how to contribute.
+
+## Ficha del proyecto
+
+Fork del emulador de PlayStation 2 PCSX2 con núcleo C++, interfaz Qt y configuración CMake.
+
+### Contenido
+
+- [pcsx2](./pcsx2), [pcsx2-qt](./pcsx2-qt), [common](./common), [bin](./bin), [CMakeLists.txt](./CMakeLists.txt), [pcsx2/CMakeLists.txt](./pcsx2/CMakeLists.txt), [common/CMakeLists.txt](./common/CMakeLists.txt), [updater/CMakeLists.txt](./updater/CMakeLists.txt), [pcsx2-qt/CMakeLists.txt](./pcsx2-qt/CMakeLists.txt).
+
+### Uso
+
+Consulta las instrucciones originales de compilación e instalación para esta revisión. Los requisitos dependen de la plataforma de destino.
+
+### Origen
+
+- [Repositorio de origen](https://github.com/miguelclaros23/pcsx2)
+- [Proyecto del que deriva](https://github.com/PCSX2/pcsx2)
+- Licencia de origen en [COPYING.GPLv3](./COPYING.GPLv3), [COPYING.LGPLv3](./COPYING.LGPLv3).
